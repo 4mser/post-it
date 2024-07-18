@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const ListaNotas = ({ notas, onNotaClick, onAgregarClick }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8  mt-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8  mt-7">
       <motion.div
         className="bg-yellow-200 p-4 rounded-md shadow-md m-2 w-full cursor-pointer flex justify-center items-center flex-col text-center border-[4px] border-yellow-400 text-yellow-600 font-medium h-auto md:h-60"
         whileHover={{ scale: 1.1, rotate: 0 }}

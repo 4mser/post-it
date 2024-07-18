@@ -71,7 +71,7 @@ const App = () => {
     <div className="p-4 min-h-screen md:px-32">
       <h1 className="text-3xl font-bold mb-4 text-slate-700">Simulador de Post-It!</h1>
       <div className="flex justify-between items-center mb-4 mt-5 text-slate-700">
-        <div className="flex space-x-2">
+        <div className="flex gap-2 w-full flex-wrap">
           <div
             className={`flex items-center space-x-1 cursor-pointer ${filtros.todo ? 'font-bold' : ''}`}
             onClick={alternarFiltroTodo}
