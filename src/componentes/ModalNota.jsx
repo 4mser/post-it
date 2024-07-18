@@ -57,6 +57,7 @@ const ModalNota = ({ nota, actualizarNota, eliminarNota, cerrarModal }) => {
         <form onSubmit={manejarActualizacion} className="relative">
           <input
             type="text"
+            placeholder='Titulo'
             value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
             className="block w-full mb-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -64,6 +65,7 @@ const ModalNota = ({ nota, actualizarNota, eliminarNota, cerrarModal }) => {
           />
           <textarea
             value={descripcion}
+            placeholder='Descripción'
             onChange={(e) => setDescripcion(e.target.value)}
             className="block w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
