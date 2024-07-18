@@ -29,13 +29,13 @@ const ModalNota = ({ nota, actualizarNota, eliminarNota, cerrarModal }) => {
   const obtenerColor = () => {
     switch (tipo) {
       case 'rutina':
-        return 'bg-blue-300';
+        return 'bg-blue-200';
       case 'pensamiento':
-        return 'bg-purple-300';
+        return 'bg-purple-200';
       case 'urgente':
-        return 'bg-red-300';
+        return 'bg-red-200';
       default:
-        return 'bg-yellow-300';
+        return 'bg-yellow-200';
     }
   };
 
@@ -93,11 +93,11 @@ const ModalNota = ({ nota, actualizarNota, eliminarNota, cerrarModal }) => {
               onClick={() => setTipo('urgente')}
             />
           </div>
-          <div className="flex justify-between">
-            <button type="submit" className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600">
+          <div className="flex justify-end gap-2">
+            <button type="submit" className="bg-cyan-500 text-white p-3 rounded-lg hover:bg-cyan-400">
               Actualizar
             </button>
-            <button type="button" onClick={manejarEliminacion} className="bg-red-500 text-white p-3 rounded-lg hover:bg-red-600">
+            <button type="button" onClick={manejarEliminacion} className="bg-red-500 text-white p-3 rounded-lg hover:bg-red-400">
               Eliminar
             </button>
           </div>

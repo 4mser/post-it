@@ -18,10 +18,4 @@ button:hover {
   transform: translateY(-2px);
 }
 
-@media (max-width: 640px) {
-  .modal-content {
-    width: 90%;
-    padding: 1rem;
-  }
-}
 

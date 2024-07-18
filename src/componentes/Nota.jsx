@@ -18,7 +18,7 @@ const Nota = ({ nota, onClick }) => {
   return (
     <motion.div
       onClick={onClick}
-      className={`${obtenerColor()} p-4 rounded shadow-md hover:shadow-xl m-2 w-full h-40 md:h-60 cursor-pointer transition-shadow`}
+      className={`${obtenerColor()} p-4 rounded shadow-md hover:shadow-xl m-2 w-full h-40 md:h-60 cursor-pointer transition-shadow overflow-y-auto`}
       whileHover={{ scale: 1.1, rotate: 0 }}
       initial={{ rotate: nota.rotacion, opacity: 0, scale: 0.9 }}
       animate={{ rotate: nota.rotacion, opacity: 1, scale: 1 }}

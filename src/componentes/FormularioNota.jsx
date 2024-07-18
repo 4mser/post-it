@@ -36,7 +36,7 @@ const FormularioNota = ({ agregarNota, cerrarModal, cantidadNotas }) => {
   return (
     <motion.form
       onSubmit={manejarEnvio}
-      className="bg-white p-6 relative modal-content"
+      className="w-full  h-full relative modal-content"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 50 }}
