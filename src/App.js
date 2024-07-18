@@ -68,9 +68,9 @@ const App = () => {
     : notas.filter(nota => filtros[nota.tipo]);
 
   return (
-    <div className="p-4 min-h-screen md:px-32">
-      <h1 className="text-3xl font-bold mb-4 text-slate-700">Simulador de Post-It!</h1>
-      <div className="flex justify-between items-center mb-4 mt-5 text-slate-700">
+    <div className="p-4 pt-28 min-h-screen md:px-32">
+      <div className="fixed w-full  left-0 px-4 z-50  bg-white/10 backdrop-blur-md flex flex-col justify-between py-4 mb-4 top-0  text-slate-700">
+      <h1 className="text-3xl font-bold mb-4 text-slate-700">Simulador de Post-It</h1>
         <div className="flex gap-2 w-full flex-wrap">
           <div
             className={`flex items-center space-x-1 cursor-pointer ${filtros.todo ? 'font-bold' : ''}`}
