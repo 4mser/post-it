@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const ModalNota = ({ nota, actualizarNota, eliminarNota, cerrarModal }) => {
   const [titulo, setTitulo] = useState(nota.titulo);
   const [descripcion, setDescripcion] = useState(nota.descripcion);
   const [tipo, setTipo] = useState(nota.tipo);
+  const descripcionRef = useRef(null);
+
+  useEffect(() => {
+    ajustarAlturaTextarea();
+  }, [descripcion]);
+
+  const ajustarAlturaTextarea = () => {
+    const textarea = descripcionRef.current;
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+  };
 
   const manejarActualizacion = (e) => {
     e.preventDefault();
@@ -64,12 +75,13 @@ const ModalNota = ({ nota, actualizarNota, eliminarNota, cerrarModal }) => {
             style={{ backgroundColor: 'white' }}
           />
           <textarea
+            ref={descripcionRef}
             value={descripcion}
             placeholder='Descripción'
             onChange={(e) => setDescripcion(e.target.value)}
-            className="block w-full mb-4 p-3  border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="block w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
-            style={{ backgroundColor: 'white' }}
+            style={{ backgroundColor: 'white', resize: 'none', overflow: 'hidden' }}
           />
           <div className="flex justify-around mb-4">
             <button
